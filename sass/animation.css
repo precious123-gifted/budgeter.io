@@ -1,0 +1,17 @@
+@-webkit-keyframes navupdown {
+  from {
+    margin-bottom: -100px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+@keyframes navupdown {
+  from {
+    margin-bottom: -100px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=animation.css.map */
