@@ -47,3 +47,23 @@
     4px 3px 7px 1px rgba(14, 13, 13, 0.549);
   background-color: lighten($appMajorColor, 2);
 }
+
+@mixin expenseAndIncomeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  margin-top: 10px;
+  width: 40px;
+  height: 30px;
+  background-color: $appMajorColor;
+  border-radius: 4px;
+  visibility: hidden;
+}
+
+@mixin editAndDeleteBottonStyle {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}

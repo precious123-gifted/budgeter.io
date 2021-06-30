@@ -1,5 +1,5 @@
  
-import { inValue ,Navv,inputAmount,addIncomeAndExpense, inputTitle,goBtn,Expenses,expenseBotton,addButton,incomeBotton,Income} from './app.js';
+import { inValue ,incomeContainer,expenseContainer  ,Navv,inputAmount,addIncomeAndExpense, inputTitle,goBtn,Expenses,expenseBotton,addButton,incomeBotton,Income} from './app.js';
 
 // DOM variables
 const loadingDisplay = document.querySelector(".preloader");
@@ -172,20 +172,20 @@ goBtn.addEventListener('touchend',()=>{
 }
 goButtonAnimation()
 
-// input behaviour
-/*
-inputTitle.addEventListener('focus',()=>{
-Nav.style.position = 'relative'  
-Body.style.position = 'relative' 
-
+//navigation function for income and expense contsiner
+function Navigation(){
+Income.addEventListener('click',()=>{
+  gsap.to(incomeContainer, { duration: 0, visibility: 'visible' })
+  gsap.to(expenseContainer, { duration: 0, visibility: 'hidden' })
 })
-inputTitle.addEventListener('blur',()=>{
-  
+Expenses.addEventListener('click',()=>{
+  gsap.to(expenseContainer, { duration: 0, visibility: 'visible' })
+  gsap.to(incomeContainer, { duration: 0, visibility: 'hidden' })
 })
-// input behaviour ending*/
+}
+Navigation()
 
-
-
+//navigation function for income and expense contsiner ending
 
 //go back to default display
 
@@ -217,4 +217,4 @@ inputTitle.addEventListener('blur',()=>{
   
  
 
-export {goBackToDefaultNavStateAnimation,Nav}
+export {goBackToDefaultNavStateAnimation,Nav,}

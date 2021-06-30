@@ -1,307 +1,3 @@
-/*first design
-* {
-  margin: 0;
-}
-html {
-  height: 100%;
-}
-body {
-  height: 100vh;
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(195, 211, 211, 0.253);
-}
-
-.preloader {
-  position: fixed;
-
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(67, 104, 104);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.preloader h1 {
-  color: rgb(253, 241, 241);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2.1em;
-}
-
-.logo {
-  opacity: 1;
-}
-
-#header {
-  margin-left: -420px;
-  user-select: none;
-}
-.header {
-  display: flex;
-  flex-direction: column;
-
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  justify-content: space-around;
-  align-items: center;
-  height: 35vh;
-  width: 100vw;
-  background-image: linear-gradient(
-    to top right,
-    rgb(89, 136, 136),
-    rgb(67, 104, 104)
-  );
-}
-.blctotalcontainer {
-  height: 27vh;
-  width: 82vw;
-  background-image: linear-gradient(
-    to top right,
-    rgb(89, 136, 136),
-    rgb(67, 104, 104)
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom-left-radius: 4vw;
-  border-bottom-right-radius: 4vw;
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.808),
-    4px 3px 7px 1px rgba(14, 13, 13, 0.801);
-}
-.balanceandtotalcontainer {
-  margin: 0;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom-left-radius: 4vw;
-  border-bottom-right-radius: 4vw;
-  box-shadow: inset -4px -4px 5px rgba(14, 13, 13, 0.863),
-    inset 4px 4px 7px 1px rgba(14, 13, 13, 0.863);
-  height: 25vh;
-  width: 80vw;
-
-  background-color: white;
-}
-
-.balancediv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.balance {
-  color: rgb(67, 104, 104);
-  display: flex;
-
-  margin-top: 7px;
-  width: 70vw;
-  justify-content: center;
-  background-color: rgba(155, 182, 182, 0.548);
-  border-top-left-radius: 4vw;
-  border-top-right-radius: 4vw;
-}
-.balance-value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 120px;
-  height: 40px;
-  background-color: rgb(67, 104, 104);
-  border-radius: 8px;
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.897),
-    inset 4px 3px 7px 1px rgba(14, 13, 13, 0.801);
-}
-.balance-number {
-  font-size: 1.2em;
-}
-
-.incomediv {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.incomee {
-  color: rgb(67, 104, 104);
-  display: flex;
-  margin-bottom: 7px;
-  width: 70vw;
-
-  justify-content: center;
-  background-color: rgba(155, 182, 182, 0.548);
-  border-bottom-left-radius: 4vw;
-  border-bottom-right-radius: 4vw;
-}
-.income-value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 40px;
-  background-color: rgb(67, 104, 104);
-  border-radius: 8px;
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.897),
-    inset 4px 3px 7px 1px rgba(14, 13, 13, 0.801);
-}
-.income-number {
-  font-size: 1.2em;
-}
-.shoulder-down {
-  display: flex;
-  flex-direction: column;
-  height: 65vh;
-  width: 100vw;
-}
-.incomeandexpensecontainer {
-  height: 170vh;
-  width: 100vw;
-  background-color: rgba(195, 211, 211, 0.253);
-}
-.navandbutton {
-  display: flex;
-  margin-bottom: -100px;
-  flex-direction: column;
-  position: relative;
-  height: 30vh;
-}
-.nav {
-  user-select: none;
-  display: flex;
-  transition: ease-in;
-  align-items: center;
-  justify-content: space-around;
-
-  height: 10vh;
-  color: white;
-  background-color: rgb(67, 104, 104);
-  border-top-left-radius: 8vw;
-  border-top-right-radius: 8vw;
-}
-.addbutton {
-  display: flex;
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.897),
-    inset 4px 3px 7px 1px rgba(14, 13, 13, 0.801);
-
-  align-self: center;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
-  background-color: rgb(67, 104, 104);
-}
-.plus {
-  user-select: none;
-  pointer-events: none;
-  color: #ffffff;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 1000;
-  font-size: 40px;
-  line-height: 50px;
-}
-
-.addincomeandexpense {
-  display: flex;
-  flex-direction: row;
-  color: white;
-}
-.expensebotton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-
-  margin-top: 10px;
-  width: 40px;
-  height: 30px;
-  background-color: rgb(67, 104, 104);
-  border-radius: 4px;
-  visibility: hidden;
-}
-.incomebotton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-
-  margin-top: 10px;
-  width: 40px;
-  height: 30px;
-  background-color: rgb(67, 104, 104);
-  border-radius: 4px;
-  visibility: hidden;
-}
-.expenses {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5vh;
-  width: 110px;
-  font-size: 2.7vw;
-  border-radius: 10px;
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.549),
-    4px 3px 7px 1px rgba(14, 13, 13, 0.549);
-  background-color: rgb(67, 104, 104);
-}
-.income {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5vh;
-  width: 110px;
-  font-size: 2.7vw;
-  border-radius: 10px;
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.549),
-    4px 3px 7px 1px rgba(14, 13, 13, 0.549);
-  background-color: rgb(67, 104, 104);
-}
-
-.inputtitle {
-  width: 70vw;
-  height: 50px;
-  border-radius: 17px;
-  outline: none;
-  border: none;
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.897),
-    inset 4px 3px 7px 1px rgba(14, 13, 13, 0.801);
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 5vw;
-  color: rgb(56, 97, 97);
-}
-.gobtn {
-  height: 40px;
-  width: 40px;
-  margin-left: 10px;
-  border-radius: 100%;
-  border: none;
-  outline: none;
-  background-color: rgb(67, 104, 104);
-  color: white;
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.549),
-    4px 3px 7px 1px rgba(14, 13, 13, 0.549);
-}
-.inval {
-  visibility: hidden;
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
-
 @import "variables";
 @import "animation";
 @import "mixins";
@@ -435,17 +131,58 @@ body {
   width: 100vw;
 
   .incomeandexpensecontainer {
-    height: 170vh;
-
-    background-color: $oppositeMajorColor;
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    $container-height: 190vh;
+    height: $container-height;
+    padding: 0;
+
+    .income-container {
+      height: 55vh;
+      width: 100vw;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .expense-container {
+      height: 55vh;
+      width: 100vw;
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .list {
-      width: 87vw;
+      margin-top: 1.8vh;
+      width: 82vw;
+      height: 8vh;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 3vw;
+      color: lighten($oppositeMajorColor, 6);
+      background-color: $appMajorColor;
+      .titleNamount {
+        width: 55vw;
+        .title {
+          height: 3.4vh%100vh;
+          font-size: 1.1em;
+
+          background: none;
+          border-style: none;
+          outline: none;
+          color: lighten($oppositeMajorColor, 6);
+        }
+      }
+
+      .editNdelete {
+        @include editAndDeleteBottonStyle;
+      }
     }
   }
 
@@ -519,17 +256,7 @@ body {
         color: $oppositeMajorColor;
 
         .expensebotton {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-
-          margin-top: 10px;
-          width: 40px;
-          height: 30px;
-          background-color: $appMajorColor;
-          border-radius: 4px;
-          visibility: hidden;
+          @include expenseAndIncomeButton;
         }
         .addbutton {
           display: flex;
@@ -558,17 +285,7 @@ body {
         }
 
         .incomebotton {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-
-          margin-top: 10px;
-          width: 40px;
-          height: 30px;
-          background-color: $appMajorColor;
-          border-radius: 4px;
-          visibility: hidden;
+          @include expenseAndIncomeButton;
         }
       } //add income and expense
     } //nav end
